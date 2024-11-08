@@ -1,0 +1,14 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    margin-top: 20px;
+}
+
+body{
+    background-image: url(./assets/img/background.webp);
+    background-size: cover;
+}
+

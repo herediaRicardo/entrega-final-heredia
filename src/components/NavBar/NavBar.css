@@ -1,0 +1,32 @@
+@import url('https://fonts.cdnfonts.com/css/evil-empire');
+*{
+    font-family: 'Evil Empire', sans-serif;
+}
+
+nav{
+    font-size: 25px;
+    margin: 40px 20px 0px 20px;
+}
+.items-nav{
+ display: contents;
+}
+nav a:hover{
+    color: red;
+}
+
+@media screen and (max-width: 575px){
+    .items-nav{
+        display: flex;
+        justify-content: center;
+    }
+    .navbar-collapse{
+        position: absolute;
+        left: 0;
+        margin-top: 40px;
+        background-color: black;
+        height: auto;
+        width: 100%;
+        padding: 10px 0px 10px 20px;
+    }
+  }
+
