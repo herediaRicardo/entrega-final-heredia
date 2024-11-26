@@ -1,0 +1,50 @@
+
+.card{
+    width: 280px;
+    height: 420px;
+    text-align: center;
+    padding: 5px;
+}
+.card-img-top{
+   height: 200px;
+   object-fit: contain;
+   transition-duration: 300ms;
+   transition-timing-function: ease-out;
+}.card-img-top:hover{
+   scale: 0.95;
+}
+.card h2{
+   font-size: 30px;   
+   margin-top: 15px;   
+   transition-duration: 300ms;
+   transition-timing-function: ease-out;
+}.card h2:hover{
+   color: grey;
+}
+
+.card :nth-child(2){
+   font-size: 40px;    
+   height: 60px;
+   margin: 0px;
+   padding: 0px;
+}
+.card :nth-child(3){
+   font-size: 15px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   height: 30px;
+   margin: 0px;
+}
+.btn-primary{
+   font-size: 15px;
+   background-color: black;
+   border: 0px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   bottom: 0px;
+   margin: 0px 0px 0px 0px;
+   transition-duration: 300ms;
+   transition-timing-function: ease-in;
+}.btn-primary:hover{   
+   scale: 1.05;
+   background-color: rgb(53, 0, 0);
+}
+

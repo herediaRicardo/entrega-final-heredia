@@ -1,15 +1,13 @@
-import React from "react";
 import './NavBar.css'
-import CardWidgets from "../CardWidgets/CardWidgets"
+import {Link} from "react-router-dom";
+import CartWidgets from "../CartWidgets/CartWidgets";
 
 function NavBar(){
   return(
     <>
-        <nav className="navbar navbar-expand-sm bg-transparent text-white">
-          
-          <div className="container-fluid flexNav">
-
-            <a className="navbar-brand bg-transparent text-white" href="#">Home</a>
+        <nav className="navbar navbar-expand-sm bg-transparent text-white">          
+          <div className="container-fluid">
+            <Link className='navbar-brand bg-transparent text-white home' to="/">Tienda</Link>
             <div className="items-nav">
             <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
@@ -19,20 +17,23 @@ function NavBar(){
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ">
                 <li className="nav-item">
-                  <a className="nav-link active bg-transparent text-white" aria-current="page" href="#">Store</a>
+                  <Link className='nav-link bg-transparent text-white' aria-current="page" to="/category/armas">Armas</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link bg-transparent text-white" href="#">Join</a>
+                  <Link className='nav-link bg-transparent text-white'  to="/category/cortas">Armas cortas</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link bg-transparent text-white" href="#">Tech</a>
+                  <Link className='nav-link bg-transparent text-white' to="/category/explosivos">Explosivos</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link bg-transparent text-white" href="#">Contact</a>
+                  <Link className="nav-link bg-transparent text-white link-nav" to="/nosotros">Nosotros
+                </Link>
                 </li>
               </ul>              
             </div>   
-               <CardWidgets amount={0} />
+            <form className="d-flex" role="search">
+              <CartWidgets cartCount={0} />
+            </form>
             </div> 
 
           </div>

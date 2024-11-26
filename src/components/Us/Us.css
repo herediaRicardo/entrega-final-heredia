@@ -1,0 +1,18 @@
+.us-container{
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+.us-container p{
+    width: 600px;
+    padding: 20px 40px 20px 20px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.us-container img{
+    width: 550px;
+    height: 550px;
+    border: 20px solid white;
+    border-radius: 100%;
+}

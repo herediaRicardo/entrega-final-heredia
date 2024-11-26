@@ -8,7 +8,11 @@ h1{
 }
 
 body{
-    background-image: url(./assets/img/background.webp);
-    background-size: cover;
+    background-image: url(./assets/img/backgroundDos.jpeg);
+    background-color: black;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
 }
 

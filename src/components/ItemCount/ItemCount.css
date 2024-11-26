@@ -1,0 +1,13 @@
+.item-count-container{
+    height: auto;
+    width: 33%;
+}
+.item-count-container h2{
+    color: black;
+}
+.item-count-container button{
+    padding: 5px 24px 5px 24px;
+    margin: 5px 10px 5px 10px;
+    border-radius: 40px;
+    font-size: 25px;
+}
