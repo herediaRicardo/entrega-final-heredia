@@ -6,7 +6,7 @@ const products = [
         category: "armas",
         img: "https://m.media-amazon.com/images/I/71zIb9UsUTL._AC_SL1500_.jpg",
         stock: 10,
-        description: "Rifle Oficial Stormtroopers"
+        description: "Rifle imperial fiable y versátil."
     },
     {
         id: "2",
@@ -15,7 +15,7 @@ const products = [
         category: "armas",
         img: "https://i.ebayimg.com/images/g/TfEAAOSwHvpa60YS/s-l1600.webp",
         stock: 3,
-        description: "Blaster BountyHunter"
+        description: "Pistola precisa y letal a corta distancia."
     },
     {
         id: "3",
@@ -24,7 +24,7 @@ const products = [
         category: "armas",
         img: "https://i.ebayimg.com/images/g/2LIAAOSwnspj94ge/s-l1600.webp",
         stock: 4,
-        description: "Agujerea a esos malditos rebeldes"
+        description: "Rifle rápido, ideal para largas distancias."
     },
     {
         id: "4",
@@ -33,7 +33,7 @@ const products = [
         category: "armas",
         img: "https://i.ebayimg.com/images/g/B54AAOSwIypjVamQ/s-l1600.webp",
         stock: 5,
-        description: "Agujerea a esos malditos rebeldes"
+        description: "Silencioso y eficaz en misiones furtivas."
     },
     {
         id: "5",
@@ -42,7 +42,7 @@ const products = [
         category: "explosivos",
         img: "https://i.etsystatic.com/20445058/r/il/e37db7/3087389553/il_1140xN.3087389553_2zx7.jpg",
         stock: 5,
-        description: "Agujerea a esos malditos rebeldes"
+        description: "Explosivo compacto de alta potencia."
     },
     {
         id: "6",
@@ -51,7 +51,7 @@ const products = [
         category: "explosivos",
         img: "https://i.etsystatic.com/11957793/r/il/69d898/2395988212/il_1140xN.2395988212_muuk.jpg",
         stock: 5,
-        description: "Detonador Termico"
+        description: "Bomba destructiva de amplio alcance."
     },
     {
         id: "7",
@@ -60,7 +60,7 @@ const products = [
         category: "cortas",
         img: "https://i.ebayimg.com/images/g/TtAAAOSw-ZlkOBTT/s-l1600.webp",
         stock: 5,
-        description: "Granada de Fragmentación"
+        description: "Sable oscuro de doble hoja giratoria."
     },
     {
         id: "8",
@@ -69,7 +69,7 @@ const products = [
         category: "cortas",
         img: "https://www.aceroymagia.com/Images/articulo/replica-z6-riot-control-baton-starwars/01-Replica-Z6-Riot-Control-Baton-StarWars.jpg",
         stock: 5,
-        description: "Baston eléctrico defensa personal"
+        description: "Bastón de plasma con aura autoritaria."
     }
 ]
 
