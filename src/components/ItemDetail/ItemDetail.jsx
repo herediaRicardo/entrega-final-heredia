@@ -1,14 +1,21 @@
-//import { Link } from "react-router-dom"
-import ItemCount from "../ItemCount/ItemCount"
-import "./ItemDetail.css"
+import { Link } from "react-router-dom";
+import ItemCount from "../ItemCount/ItemCount";
+import "./ItemDetail.css";
+import { useCart } from "../../hooks/useCart";
+import { useNotification } from "../../context/NotificationContext";
 
 export default function ItemDetail({id, name, img, description, category, price, stock}) {
-  const handleAdd = (cantidad) => {
-    const objectToAdd = {
-      id, name, price, cantidad
+  const {addItem, isInCart} = useCart()
+  const {setNotification} = useNotification()
+  
+  const handleAdd = (count) => {
+    const productToAdd = {
+      id, name, price, quantity: count
     }
-    console.log(objectToAdd)
+    addItem(productToAdd)
+    setNotification("success", `Se agregó ${count} de ${name}`);
   }
+  
   return (
     <div className="container-detail">
         <h1>{name}</h1>
@@ -25,9 +32,14 @@ export default function ItemDetail({id, name, img, description, category, price,
                 <p>Precio: $ {price}</p>
                 <p>Disponible: {stock}</p>
             </div>
-            <ItemCount className="count-detail" stock={stock} onAdd={handleAdd}/>
-            {/* <Link to="/cart" >Finalizar compra</Link> */}
+
+        {
+          isInCart(id) ? (
+          <Link to="/cart">Finalizar compra</Link>
+        ) : (
+          <ItemCount stock={stock} onAdd={handleAdd} />
+        )}
         </div>
     </div>
-  )
+  );
 }
