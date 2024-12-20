@@ -20,7 +20,7 @@ export default function ItemListContainer(){
         getDocs(collectionRef)
           .then((querySnapshot)=>{
             const product = querySnapshot.docs.map((doc)=>{
-                return {id: doc.id, ...doc.data()} //Todo lo que está dentro de la coleccion productos
+                return {id: doc.id, ...doc.data()}
             })
             setProduct(product)
           })

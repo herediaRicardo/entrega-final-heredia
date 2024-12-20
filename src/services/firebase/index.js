@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDa4KSXM4eUg3vInnNswz4beY-48_Alghk",
-  authDomain: "e-commerce-heredia.firebaseapp.com",
-  projectId: "e-commerce-heredia",
-  storageBucket: "e-commerce-heredia.firebasestorage.app",
-  messagingSenderId: "854462727973",
-  appId: "1:854462727973:web:46feb391c6005be02cbccc"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase
