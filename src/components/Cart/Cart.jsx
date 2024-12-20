@@ -22,7 +22,7 @@ function Cart() {
       {cart.map((item)=> (
         <CartItem key={item.id} {...item} />
       ))}
-      <h3>Total: ${total}</h3>
+      <h3>Total: ¢{total}</h3>
       <div>
         <button onClick={clearCart}>Limpiar Carrito</button>
       </div>

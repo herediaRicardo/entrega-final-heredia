@@ -29,7 +29,7 @@ export default function ItemDetail({id, name, img, description, category, price,
             <div className="card-body">
                 <p>{description}</p>
                 <p>Category: {category}</p>
-                <p>Precio: $ {price}</p>
+                <p>Precio: ¢ {price}</p>
                 <p>Disponible: {stock}</p>
             </div>
 

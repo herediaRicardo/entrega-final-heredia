@@ -14,10 +14,10 @@ function CartItem({id, name, quantity, price}) {
         </header>
         <section>
             <p>Cantidad: {quantity}</p>
-            <p>Precio x unidad: ${price}</p>
+            <p>Precio x unidad: ¢{price}</p>
         </section>
         <footer>
-            <p>TSubtotal: $ {price * quantity}</p>
+            <p>TSubtotal: ¢ {price * quantity}</p>
             <button onClick={() => handleRemove(id)}>❌</button>
         </footer>
     </div>
