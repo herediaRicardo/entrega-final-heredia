@@ -1,46 +1,75 @@
+import { useState } from 'react';
 import './NavBar.css'
 import {Link} from "react-router-dom";
 import CartWidgets from "../CartWidget/CartWidget";
 
+
 function NavBar(){
-  return(
-    <>
-        <nav className="navbar navbar-expand-sm bg-transparent text-white">          
-          <div className="container-fluid">
-            <Link className='navbar-brand bg-transparent text-white home' to="/">Tienda</Link>
-            <div className="items-nav">
-            <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
 
-           
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav ">
-                <li className="nav-item">
-                  <Link className='nav-link bg-transparent text-white' aria-current="page" to="/category/armas">Armas</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className='nav-link bg-transparent text-white'  to="/category/cortas">Armas cortas</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className='nav-link bg-transparent text-white' to="/category/explosivos">Explosivos</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link bg-transparent text-white link-nav" to="/nosotros">Nosotros
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleToggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
+  return (
+    <nav className="navbar navbar-expand-md text-white bg-dark">
+      <div className="container-fluid">
+        <Link className="navbar-brand nav-link home" to="/">Tienda</Link>
+        <div className="items-nav">
+          {/* Botón Hamburguesa */}
+          <button
+            className="navbar-toggler"
+            type="button"
+            aria-controls="navbarNav"
+            aria-expanded={isMenuOpen ? "true" : "false"}
+            aria-label="Toggle navigation"
+            onClick={handleToggleMenu}
+          >
+            {/* Ícono de hamburguesa */}
+            <span className={`navbar-toggler-icon ${isMenuOpen ? 'd-none' : ''}`}></span>
+            {/* Ícono de cerrar */}
+            <span className={`close-icon ${isMenuOpen ? '' : 'd-none'}`}>&#x2715;</span>
+          </button>
+
+          {/* Menú de Navegación */}
+          <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link className="nav-link" to="/category/armas" onClick={handleLinkClick}>
+                  Armas
                 </Link>
-                </li>
-              </ul>              
-            </div>   
-            <form className="d-flex" role="search">
-              <CartWidgets cartCount={0} />
-            </form>
-            </div> 
-
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/category/cortas" onClick={handleLinkClick}>
+                  Armas cortas
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/category/explosivos" onClick={handleLinkClick}>
+                  Explosivos
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/nosotros" onClick={handleLinkClick}>
+                  Nosotros
+                </Link>
+              </li>
+            </ul>
           </div>
 
-        </nav>         
-    </>
-    )
-}
+          {/* Ícono del Carrito */}
+          <div className="d-flex" role="search">
+            <CartWidgets cartCount={0} />
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
 export default NavBar;

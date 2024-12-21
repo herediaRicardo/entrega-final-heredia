@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Barlow+Condensed:wght@300;500&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+    font-family: 'Giuconda';
+    src: url('./GiucondaBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 *{
     margin: 0px;
@@ -11,10 +16,12 @@ h1{
 }
 
 p{
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Giuconda', sans-serif;
+    color: rgb(155, 213, 254);
 }
 
 body{
+    font-family: 'Giuconda', sans-serif;
     background-image: url(./assets/img/backgroundDos.jpeg);
     background-color: black;
     background-size: cover; 
