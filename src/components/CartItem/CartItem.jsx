@@ -3,7 +3,6 @@ import "./cartItem.css";
 
 
 function CartItem({id, name, img, quantity, price}) {
-    console.log(name)
     const {removeItem} = useCart()
     const handleRemove = (id) => {
         removeItem(id)

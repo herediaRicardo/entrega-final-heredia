@@ -1,0 +1,46 @@
+.body-checkout{
+    width: 50%;
+    display: flex;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.formulario{
+    width: 60%;
+    margin: auto;
+    padding: 20px 20px 20px 0px;
+    color: white;
+}
+
+label{
+    text-transform: uppercase;
+    margin: 25px 0px 5px 0px
+}
+
+input{
+    padding: 5px 30px 5px 5px;
+    color: black;
+}
+
+.detalle-total h3{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.cnf-compra{
+    padding: 20px 100px 20px 20px;
+    background-color: rgb(189, 89, 7);
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition-duration: 400ms;
+    transition-timing-function: ease-out;   
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0px 20px 0px;
+}
+
+.detalle-total{
+    width: 40%;
+}

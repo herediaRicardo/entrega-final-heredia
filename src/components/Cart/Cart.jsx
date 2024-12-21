@@ -13,12 +13,11 @@ function Cart() {
     return <h1>No hay items en el carrito</h1>
   }
 
-  console.log(cart)
-
   
   return (
+    
+    <div className="body-cart">
     <div className="cart">
-
       <section className="detalle-productos">
       <h1>Tu Carrito</h1>
       {cart.map((item)=> (
@@ -32,9 +31,8 @@ function Cart() {
       <div>
         <button className="limpiar-carro" onClick={clearCart}>Limpiar Carrito</button>
       </div>    
-
-      </section>
-      
+      </section>      
+    </div>
     </div>
   );
 }

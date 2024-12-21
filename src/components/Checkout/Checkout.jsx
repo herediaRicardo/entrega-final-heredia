@@ -2,8 +2,10 @@ import { useState } from "react";
 import { useCart } from "../../hooks/useCart";
 import {addDoc, collection, documentId, getDocs, query, where, writeBatch } from "firebase/firestore";
 import {db} from "../../services/firebase"
+import "./checkout.css";
 
 function Checkout() {
+  
   const [orderCreated, setOrderCreated] = useState(false);
   const [buyer, setBuyer] = useState({
     firstName: "",
@@ -80,7 +82,9 @@ function Checkout() {
   }
 
   return (
-    <div>
+
+    <div className="body-checkout">
+    <div className="formulario">
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -88,6 +92,7 @@ function Checkout() {
         }}
       >
         <label>Nombre</label>
+        <br />
         <input
           type="text"
           name="firstName"
@@ -96,6 +101,7 @@ function Checkout() {
         />
         <br />
         <label>Apellido</label>
+        <br />
         <input
           type="text"
           name="lastName"
@@ -104,6 +110,7 @@ function Checkout() {
         />
         <br />
         <label>Email</label>
+        <br />
         <input
           type="email"
           name="email"
@@ -112,6 +119,7 @@ function Checkout() {
         />
         <br />
         <label>Telefono</label>
+        <br />
         <input
           type="number"
           name="phone"
@@ -120,6 +128,7 @@ function Checkout() {
         />
         <br />
         <label>Dirección</label>
+        <br />
         <input
           type="text"
           name="address"
@@ -127,8 +136,23 @@ function Checkout() {
           onChange={handleChange}
         />
         <br />
-        <button type="submit">Generar Orden de Compra</button>
+        <br />
+        <br />
+        <br />
       </form>
+      </div>
+
+      <section className="detalle-total">        
+
+      <h3>Total: ¢{total}</h3>
+      
+      <button className="cnf-compra" onClick={crateOrder}>Confirmar compra</button>
+      <div>
+        <button className="limpiar-carro" onClick={clearCart}>Limpiar Carrito</button>
+      </div>          
+      
+      </section>     
+    
     </div>
   );
 }
