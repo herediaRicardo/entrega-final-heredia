@@ -1,15 +1,17 @@
 @import url('https://fonts.cdnfonts.com/css/evil-empire');
 
 
+
 nav{    
     height: 60px;
     margin: 10px 10px 0px 10px;
     font-size: 25px;
     border-radius: 25px;
-    background-color: #0C1010;
-    font-family: 'Evil Empire', sans-serif;  
+    font-family: 'Evil Empire', sans-serif;     
+    background-color: #111820ca;
     border: 1px solid #4C5D73;
 }
+
 .items-nav{
  display: contents;
 }

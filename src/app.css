@@ -22,11 +22,11 @@ p{
 
 body{
     font-family: 'Giuconda', sans-serif;
-    background-image: url(./assets/img/backgroundDos.jpeg);
+    background-image: url(./assets/img/background.png);
     background-color: black;
     background-size: cover; 
     background-repeat: no-repeat;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 

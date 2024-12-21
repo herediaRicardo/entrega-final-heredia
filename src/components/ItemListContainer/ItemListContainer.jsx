@@ -9,10 +9,12 @@ import { useNotification } from "../../context/NotificationContext";
 export default function ItemListContainer(){
 
     const [product, setProduct] = useState([])
+    const [loading, setLoading] = useState(true)
     const {categoryId} = useParams()
     const {setNotification} = useNotification()
 
     useEffect(()=>{
+        setLoading(true)
         const collectionRef = categoryId 
         ? query(collection(db, "productos"), where("category", "==", categoryId))
         : collection(db, "productos")

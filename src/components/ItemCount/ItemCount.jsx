@@ -21,9 +21,9 @@ export default function ItemCount({initialValue=1, stock, onAdd}) {
       <>
       <div className="item-count-container">
         <h2>{cantidad}</h2>
-        <button onClick={decrement}>-</button>
-        <button onClick={() => onAdd(cantidad)} >Agregar al carrito</button>
-        <button onClick={increment}>+</button>
+        <button className="cant-btn" onClick={decrement}>-</button>
+        <button className="span-btn" onClick={() => onAdd(cantidad)} >Agregar al carro</button>
+        <button className="cant-btn" onClick={increment}>+</button>
         </div>
       </>
     );

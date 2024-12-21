@@ -10,7 +10,7 @@ export default function ItemDetail({id, name, img, description, category, price,
   
   const handleAdd = (count) => {
     const productToAdd = {
-      id, name, price, quantity: count
+      id, name, img, price, quantity: count
     }
     addItem(productToAdd)
     setNotification("success", `Se agregó ${count} de ${name}`);
@@ -35,7 +35,7 @@ export default function ItemDetail({id, name, img, description, category, price,
 
         {
           isInCart(id) ? (
-          <Link to="/cart">Finalizar compra</Link>
+          <Link to="/cart" className="fnz-compra">Finalizar compra</Link>
         ) : (
           <ItemCount stock={stock} onAdd={handleAdd} />
         )}

@@ -3,11 +3,36 @@
     width: 33%;
 }
 .item-count-container h2{
-    color: black;
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
 }
-.item-count-container button{
-    padding: 5px 24px 5px 24px;
-    margin: 5px 10px 5px 10px;
+.span-btn{
+    height: 50px;
+    width: 190px;
+    color: white;
+    border: 0px;
+    background-color: #4C5D73;
     border-radius: 40px;
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in;
+}
+
+.cant-btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 0px;
+    color: white;
+    background-color: #4C5D73;
+    font-weight: bold;
+    margin: 10px;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in;
+}
+
+button:hover{
+    scale: 1.05;
 }

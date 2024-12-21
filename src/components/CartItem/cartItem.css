@@ -1,0 +1,19 @@
+article{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.remove-item{
+    height: 35px;
+    width: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url(../../assets/img/icon-item-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    border: 0px;
+}
+

@@ -17,7 +17,7 @@ function NavBar(){
   };
 
   return (
-    <nav className="navbar navbar-expand-md text-white bg-dark">
+    <nav className="navbar navbar-expand-md text-white">
       <div className="container-fluid">
         <Link className="navbar-brand nav-link home" to="/">Tienda</Link>
         <div className="items-nav">
@@ -64,8 +64,13 @@ function NavBar(){
 
           {/* Ícono del Carrito */}
           <div className="d-flex" role="search">
-            <CartWidgets cartCount={0} />
+              <li>
+                <Link to="/cart" onClick={handleLinkClick}><CartWidgets cartCount={0} />
+                </Link>
+              </li>
+            
           </div>
+
         </div>
       </div>
     </nav>
