@@ -22,19 +22,17 @@ function Cart() {
       <section className="detalle-productos">
       <h1>Tu Carrito</h1>
       {cart.map((item)=> (
-        <CartItem key={item.id} {...item} />
+        <CartItem className key={item.id} {...item} />
       ))}
       </section>
-      
-      <hr />
 
       <section className="detalle-total">        
-      <Link to='/checkout'>Ir a pagar</Link>      
+      <Link className="ir-pagar" to='/checkout'>Ir a pagar</Link>      
       <h3>Total: ¢{total}</h3>
       <div>
-        <button onClick={clearCart}>Limpiar Carrito</button>
-      </div>
-      
+        <button className="limpiar-carro" onClick={clearCart}>Limpiar Carrito</button>
+      </div>    
+
       </section>
       
     </div>

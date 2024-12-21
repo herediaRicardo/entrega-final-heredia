@@ -5,6 +5,13 @@ article{
     align-items: center;
 }
 
+.container-detalle-cart-item{
+    width: 50%;
+    text-align: left;
+}.container-detalle-cart-item h2{
+    text-align: left;
+}
+
 
 .remove-item{
     height: 35px;
@@ -16,4 +23,5 @@ article{
     font-weight: bold;
     border: 0px;
 }
+
 
